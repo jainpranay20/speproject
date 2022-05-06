@@ -8,17 +8,17 @@
         state: started
 
     - name: pull docker front-end image
-      shell: docker pull sagarshirke2674/spe:c1
+      shell: docker pull jainpranay20/spe:c1
 
     - name: pull docker server image
-      shell: docker pull sagarshirke2674/spe:s1
+      shell: docker pull jainpranay20/spe:s1
 
     - name: Create back-end container
 
       docker_container:
         name: backend
 
-        image: sagarshirke2674/spe:s1
+        image: jainpranay20/spe:s1
 
         ports:
           - "5000:5000"
@@ -28,7 +28,7 @@
       docker_container:
         name: frontend
 
-        image: sagarshirke2674/spe:c1
+        image: jainpranay20/spe:c1
 
         interactive: true
 
